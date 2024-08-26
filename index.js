@@ -6,7 +6,7 @@ app.use(express.json()); // Para poder manejar JSON en las peticiones
 let productos = [
     { id: 1, nombre: 'Producto 1', precio: 10 },
     { id: 2, nombre: 'Producto 2', precio: 20 },
-    { id: 3, nombre: 'Producto 3', precio: 30 }
+    { id: 3, nombre: 'Producto 3', precio: 40 }
 ];
 
 // Obtener todos los productos
@@ -47,7 +47,7 @@ app.delete('/productos/:id', (req, res) => {
     res.status(204).send();
 });
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 10000;
 app.listen(port, () => {
     console.log(`Servidor Express corriendo en el puerto ${port}`);
 });
